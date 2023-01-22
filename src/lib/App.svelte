@@ -100,8 +100,8 @@
 </div>
 
   <div class="flex content-center mx-3 justify-evenly">
-    <Box1/>
+    <!-- <Box1/> -->
     <Box2/>
-    <!-- <Box3/> -->
+    <Box3/>
   </div>
   </main>
