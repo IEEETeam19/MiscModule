@@ -3,7 +3,7 @@
     import {array} from "../stores/data.js"
     import {OutputArr, flag} from "../stores/outputData.js"
 
-    
+
     let oprs = ["all", "int", "frac", "even", "odd"]
     $: opr = -1;
     let arrF = [];
