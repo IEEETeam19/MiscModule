@@ -21,49 +21,36 @@
       l = [...l, a];
     }
   }
+  
   const inputTake = function NL()
+  {
+    arr = [];
+    var i,j,ind;
+    i=j=0;
+    var str="z";
+
+    for(; i<l.length; i++)
     {
-      arr = [];
-      var i,j,ind;
-      i=j=0;
-      var str="z";
-  
-      for(; i<l.length; i++)
+      var value;
+      if(i == 0)
+        value = parseInt(l[i], 10);
+
+      else if(i > 0)
       {
-
-        for(var a=0; a<l[i].length; a++)  // 1, 1 2, 1 2 3, 1 2 3 4
-        {
-            var value;
-            if(a == 0)
-                value = parseInt(l[i], 10);
-
-            else if(a > 0)
-            {
-                var ele = l[i][a].substring(l[i][a].length - 1);
-                value = parseInt(ele, 10);
-            }
-            arr = [...arr, value];
-        }
-
-        // var value;
-        // if(i == 0)
-        //   value = parseInt(l[i], 10);
-  
-        if(i > 0)
-        {
-          ind = l[i].lastIndexOf('\n');
-          var strR = l[i].substring(ind+1);
-          value = parseInt(strR, 10);
-        }
-        arr = [...arr, value]; 
+        ind = l[i].lastIndexOf('\n');
+        var strR = l[i].substring(ind+1);
+        value = parseInt(strR, 10);
       }
-    
-      array.set(arr);
-  
-      // console.log(arr);
-      console.log("Actual Array: "+$array);
-  
+      arr = [...arr, value]; 
     }
+  
+    array.set(arr);
+
+    // console.log(arr);
+    console.log("Actual Array: "+$array);
+
+  }
+
   // document.getElementById("Op").innerHTML = "<p>Hello</p>";
   
 </script>
